@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title>Joe's Hotdogs</title>
+</head>
+
+<body>
+
+    <h1>Joe's Hotdogs</h1>
+    <h2>Order details</h2>
+    <script language="javascript">
+        var hotdogs=3.25;
+        var fries=2.00;
+        var drinks=1.50;
+        var discount = 0.10;
+
+        alert("Welcome to Joe's hotdogs!");
+   
+        answer = prompt("How many hotdogs do you want?");
+        document.write("You have " + answer + " hotdogs " + "that will cost $" + answer * hotdogs + "<br />")
+       
+        var foodvalue = answer * hotdogs;
+
+        answer = prompt("How about fries?");
+        document.write(" You have " + answer + " fries " + "that will cost $" + (answer * fries) + "<br />");
+
+        var sidevalue = answer * fries;
+
+        answer = prompt("How about drinks");
+        document.write(" You have " + answer + " drinks " + "that will cost $" + (answer * drinks) + "<br />");
+        
+
+        var bevvalue = answer * drinks;
+        var total = foodvalue + sidevalue + bevvalue;
+        var tax = total * 0.06;
+        var withdiscount = total * discount;
+        
+
+            if (total >= 20)
+            {
+                document.write("You qualify for our voucher! Congrats! your tax is " + tax + " which concludes to $" + ((total - withdiscount) + tax) + "<br />");
+           
+            }
+            else 
+            { 
+                document.write("Your tax is " + tax + " which concludes to a total of $" + (total + tax))
+            }
+     
+    </script>
+</body>
+
+
+</html>
+
